@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const graphQlHttp = require('express-graphql');
 const mongoose = require('mongoose');
@@ -11,6 +12,8 @@ const isAuth = require('./middleware/is-auth');
 const app = express();
 
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, 'frontend/my-app/build')));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -31,6 +34,10 @@ app.use('/graphql', graphQlHttp({
     rootValue: graphQlResolvers, 
     graphiql: true
 }));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'frontend/my-app/build', 'index.html'));
+});
 
 //TODO: Change mongo URL later. 
 console.log(`Connecting to DB: ${process.env.MONGO_DB}`);
