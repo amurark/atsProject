@@ -1,0 +1,17 @@
+.wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #efefef;
+    background-image: url('../backgrounds/home3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: scroll;
+}
+
+.headers {
+    text-align: center;
+    font-size: 36px;
+}

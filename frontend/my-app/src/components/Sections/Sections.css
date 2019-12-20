@@ -1,0 +1,285 @@
+.section {
+    /* margin: 5rem 5rem; */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.contentBox {
+    /* background: rgba(255, 255, 255, 0.5); */
+}
+
+.headers {
+    font-weight: 100;
+}
+
+.section.company-title-animation {
+    height: 100%;
+    padding: 0;
+}
+.company-title-animation {
+    color: #e5e5e5;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    text-align: right;
+    padding: 9rem 5rem;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.company-title-animation h1,
+.company-title-animation h2,
+.company-title-animation h3 {
+    margin: 0;
+    display: block;
+    font-weight: 400;
+}
+.company-title-animation h1 {
+    font-size: 5rem;
+    /* line-height: 5rem; */
+    line-height: 4rem; /* Modified */
+    animation: slide2 2s ease-in 0s 1 normal;
+    -webkit-animation: slide2 2s ease-in 0s 1 normal;
+}
+.company-title-animation h2 {
+    font-size: 4.5rem;
+    /* line-height: 4.5rem;*/
+    line-height: 3.5rem; /*modified */
+    animation: slide2-5 2s ease-in 0s 1 normal;
+    -webkit-animation: slide2-5 2s ease-in 0s 1 normal;
+}
+.company-title-animation h3 {
+    font-size: 4rem;
+    line-height: 4rem;
+    animation: slide4 2s ease-in 0s 1 normal;
+    -webkit-animation: slide4 2s ease-in 0s 1 normal;
+}
+
+@keyframes slide2 {
+    0% {margin-right:-2rem; opacity: 0.2;}
+    1000% {margin-right:0rem; opacity: 1;}
+}
+
+@keyframes slide2-5 {
+    0% {margin-right:-2.5rem; opacity: 0.2;}
+    1000% {margin-right:2.5rem; opacity: 1;}
+}
+@keyframes slide4 {
+    0% {margin-right:-4rem; opacity: 0.2;}
+    1000% {margin-right:4rem; opacity: 1;}
+}
+
+
+.about-us {
+    background: rgba(255, 255, 255, 1);
+    padding: 4rem;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.0.25);
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    color: #777;
+    text-align: justify;
+}
+
+.second-background {
+    background-image: url('../../backgrounds/background2.jpg');
+    height: 25rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services {
+    background: rgb(42, 50, 62);
+    /* For rectangles
+    height: 20rem;*/
+    padding: 3rem 5rem;
+}
+
+.services table {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.services table:first-child {
+    margin-bottom: 3rem;
+}
+
+.services tr {
+}
+
+.services tr td {
+    width: 30%;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.yellow-theme {
+    color:rgb(235, 209, 67)
+}
+
+
+.holder {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+    display: inline-block;
+    color: rgb(42, 50, 62);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+    cursor: grab;
+}
+
+.rotateContainer {
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.holder:hover>.rotateContainer {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.frontFace {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* border: 2px solid rgb(235, 209, 67); */
+    /* background: rgb(235, 209, 67); */
+    border: 10px double rgb(235, 209, 67);
+    color: rgb(235, 209, 67);
+    font-size: 3rem;
+    border-radius: 10rem;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+    line-height: calc(10rem - 20px);
+    font-weight: 100;
+}
+
+.backFace {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* left: 0;
+    top: 0; */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    border: 2px solid #75A2A2;;
+    border-radius: 10rem;
+    box-sizing: border-box;
+    background: #75A2A2;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.8);
+    font-size: 1.4rem;
+    line-height: calc(10rem - 20px);
+}
+
+.testimonials {
+    background: #2E426C;
+    padding: 4rem;
+    font-size: 1.5rem;
+    height: 30rem;
+    border: 1px solid rgba(0,0,0,0.0.25);
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    color: rgba(34, 18, 18, 0.842);
+}
+
+.testimonialBox {
+    margin: 0 5rem;
+    height: 100%;
+    padding: 2rem;
+    box-shadow:0 0 20px 0 rgba(0,0,0,0.5);
+    border: 8px double rgb(235, 209, 67);
+    box-sizing: border-box;
+    color: #d3d3d3;
+}
+
+.slider {
+    height: 25rem;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.slider h2 {
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+.slider-text {
+    height: 25rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.slider-text p {
+    max-height: 11rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.slider-text1 {
+    animation: slideHorizontal 15s linear infinite;
+}
+
+@keyframes slideHorizontal {
+    0% {margin-top: -87rem;}
+    5% {margin-top: -58rem;}
+    33% {margin-top: -58rem;}
+    38% {margin-top: -29rem;}
+    66% {margin-top: -29rem;}
+    71% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+
+.testimonial-name {
+    text-align: right !important;
+}
+
+.stars {
+    text-align: center;
+    margin-top: 1rem;
+    color: #ffd700;
+}
+
+.star {
+    padding-right: 0.3rem;
+}
+
+.third-background {
+    background-image: url('../../backgrounds/background3.jpg');
+    height: 40rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-us {
+    background: #34353d;
+    padding: 4rem;
+    color: #0097f1;
+    text-align: center;
+}
+.contact-us h2 {
+    margin-top: 0;
+}
+
+.contact-us a {
+    color: #0097f1;
+    text-decoration: none;
+}
+
+.contact-us a:hover {
+    text-decoration: underline;
+}
