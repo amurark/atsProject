@@ -13,7 +13,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'frontend/my-app/build')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -36,7 +36,7 @@ app.use('/graphql', graphQlHttp({
 }));
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'frontend/my-app/build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', 'index.html'));
 });
 
 //TODO: Change mongo URL later. 
