@@ -50,7 +50,7 @@ class Feedback extends Component {
             `
         };
         console.log(JSON.stringify(requestBody, null, 2));
-        fetch('http://localhost:9001/graphql', {
+        fetch('http://localhost:8080/graphql', {
             method: 'POST',
             body: JSON.stringify(requestBody),
             //Content-Type ensures that the backend tries to parse JSON from the body. 

@@ -43,8 +43,9 @@ app.get('/', function(req, res) {
 console.log(`Connecting to DB: ${process.env.MONGO_DB}`);
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_URL}/${process.env.MONGO_DB}?retryWrites=true&w=majority`)
         .then(() => {
-            console.log("Connected to the database. Serving at port 9001...");
-            app.listen(9001);
+            const port = process.env.PORT || 8080;
+            console.log(`Connected to the database. Serving at port ${port}...`);
+            app.listen(port);
         })
         .catch(err => {
             console.log(err);
