@@ -32,7 +32,7 @@ app.use(isAuth);
 app.use('/graphql', graphQlHttp({
     schema: graphQlSchema,
     rootValue: graphQlResolvers, 
-    graphiql: true
+    // graphiql: true
 }));
 
 app.get('/', function(req, res) {
