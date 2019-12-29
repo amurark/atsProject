@@ -80,6 +80,15 @@
     overflow: auto;
 }
 
+.promotions-content-box::-webkit-scrollbar {
+    display: none;
+}
+
+  /* Hide scrollbar for IE and Edge */
+.promotions-content-box {
+    -ms-overflow-style: none;
+}
+
 .promotions-content-header {
     /* position: relative;
     top: 0; */
