@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalf, faPlane, faBusAlt, faHotel, faShip, faSuitcaseRolling } from "@fortawesome/free-solid-svg-icons";
 import './Sections.css';
 
-import Feedback from '../Feedback/Feedback.js';
+import Feedback from '../Feedback/Feedback';
 
 const section = props => {
     if(props.sectionType === "title") {

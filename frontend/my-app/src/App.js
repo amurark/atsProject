@@ -5,6 +5,7 @@ import AuthContext from './context/auth-context';
 import MainNavigation from './components/Navigation/MainNavigation';
 import HomePage from './pages/Home';
 import ProfilePage from './pages/Profile';
+import PromotionsPage from './pages/Promotions';
 import AuthPage from './pages/Auth';
 import './App.css';
 
@@ -42,6 +43,7 @@ class App extends Component {
               {!this.state.token && (
                 <Route path="/profile" component={ProfilePage} />
               )}
+              <Route path="/promotions" component={PromotionsPage} />
               <Redirect path="/" to="/home" exact />
               {this.state.token && (
                 <Redirect path="/auth" to="/home" exact />

@@ -11,11 +11,16 @@ const mainNavigation = props => (
             (context) => {
                 return (
                     <header className="main-navigation">
-                        <div className="main-navigation__logo">
+                        <NavLink className="main-navigation__logo" to="/home">
                             <h1>Ankit Travel Services</h1>
-                        </div>
+                        </NavLink>
                         <nav className="main-navigation__items">
                             <ul>
+                                {!context.token && (
+                                    <li>
+                                        <NavLink to="/promotions">Promotions</NavLink>
+                                    </li>
+                                )}
                                 {!context.token && (
                                     <li>
                                         <NavLink to="/auth">Login</NavLink>

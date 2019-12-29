@@ -13,7 +13,21 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'client')));
+if(process.env.RUN_ENV === 'DEV') {
+    console.log("i am here");
+    app.use(express.static(path.join(__dirname, 'frontend/my-app/public')));
+} else if(process.env.RUN_ENV === 'PROD') {
+    app.use(express.static(path.join(__dirname, 'client')));
+} else {
+    console.error("Run environment not specified");
+}
+
+// TODO: Check if it works
+app.use(function(request, response){
+    if(!request.secure){
+        response.redirect("https://" + request.headers.host + request.url);
+    }
+});
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -28,15 +42,29 @@ app.use((req, res, next) => {
 
 app.use(isAuth);
 
-
-app.use('/graphql', graphQlHttp({
+let graphqlConfigObj = {
     schema: graphQlSchema,
-    rootValue: graphQlResolvers, 
-    // graphiql: true
-}));
+    rootValue: graphQlResolvers,
+};
+
+if(process.env.RUN_ENV !== 'PROD') {
+    graphqlConfigObj['graphiql'] = true;
+} else {
+    graphqlConfigObj['graphiql'] = false;
+}
+
+app.use('/graphql', graphQlHttp(graphqlConfigObj));
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client', 'index.html'));
+    console.log("here", process.env);
+    if(process.env.RUN_ENV === 'DEV') {
+        console.log("here");
+        res.sendFile(path.join(__dirname, 'frontend/my-app/public', 'index.html'));
+    } else if(process.env.RUN_ENV === 'PROD') {
+        res.sendFile(path.join(__dirname, 'client', 'index.html'));
+    } else {
+        console.error("Run environment not specified");
+    }
 });
 
 //TODO: Change mongo URL later. 
@@ -46,7 +74,14 @@ mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PA
             const port = process.env.PORT || 8080;
             console.log(`Connected to the database. Serving at port ${port}...`);
             app.listen(port);
+            // setupGoogleReviewIntegration();
         })
         .catch(err => {
             console.log(err);
         });
+
+
+
+function setupGoogleReviewIntegration() {
+    console.log("jere");
+}

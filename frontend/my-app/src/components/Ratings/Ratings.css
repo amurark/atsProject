@@ -1,0 +1,50 @@
+.star {
+    position: relative;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-right: 0.4rem;
+}
+
+.star>.before-element,
+.star>.after-element,
+.star>.main-star,
+.star>.overlay-half-star,
+.star>.overlay-star
+{
+    position: absolute;
+    top: 0;
+}
+
+.main-star {
+    color: rgb(255, 102, 0, 0.6);
+}
+
+.overlay-half-star {
+    color: rgba(255, 123, 0);
+}
+
+.overlay-star {
+    color: rgba(255, 123, 0);
+}
+
+
+
+.before-element {
+    left: 0;
+    height: 100%;
+    width: 50%;
+    /* background:rgba(0,255,0,0.2); */
+    z-index: 2;
+}
+
+.after-element {
+    right: 0;
+    height: 100%;
+    width: 50%;
+    /* background: rgba(0,0,0,0.2); */
+    z-index: 2;
+}
+

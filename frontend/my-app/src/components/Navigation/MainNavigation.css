@@ -12,10 +12,15 @@
     z-index: 1;
 }
 
+.main-navigation__logo {
+    text-decoration: none;
+}
+
 .main-navigation__logo h1 {
     margin: 0;
     font-size: 1.25rem;
     color: #dfdfdf;
+    text-decoration: none;
 }
 
 .main-navigation__items {

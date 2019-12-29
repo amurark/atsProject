@@ -153,8 +153,10 @@
     -webkit-backface-visibility: hidden;
     /* border: 2px solid rgb(235, 209, 67); */
     /* background: rgb(235, 209, 67); */
-    border: 10px double rgb(235, 209, 67);
-    color: rgb(235, 209, 67);
+    /* border: 10px double rgb(235, 209, 67);
+    color: rgb(235, 209, 67); */
+    border: 10px double rgb(223, 44, 88);
+    color: rgb(223, 44, 88);
     font-size: 3rem;
     border-radius: 10rem;
     box-sizing: border-box;
@@ -187,7 +189,7 @@
     padding: 4rem;
     font-size: 1.5rem;
     height: 30rem;
-    border: 1px solid rgba(0,0,0,0.0.25);
+    border: 1px solid rgba(0,0,0,.0.25);
     border-radius: 3px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
     color: rgba(34, 18, 18, 0.842);

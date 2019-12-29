@@ -2,7 +2,7 @@
     background: rgba(255, 255, 255, 0.5);
     padding: 4rem;
     font-size: 1.5rem;
-    height: 40rem;
+    height: 50rem;
     border: 1px solid rgba(0,0,0,0.0.25);
     border-radius: 3px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
@@ -21,29 +21,71 @@
     padding: 2rem;
     box-sizing: border-box;
     font-size: 1.5rem;
-    border: 1px solid rgba(0,0,0,0.0.25);
+    border: 1px solid rgba(0,0,0,0.25);
     border-radius: 3px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
     color: rgba(34, 18, 18, 0.8);
-}
-
-.form-control label,
-.form-control input {
-    width: 100%;
-    display: block;
+    overflow: auto;
 }
 
 .form-control label {
+    width: 100%;
+    display: block;
     margin-bottom: 0.2rem;
     font-size: 1.2rem;
 }
-
 .form-control input {
-    height: 1.5rem;
+    width: 100%;
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
 }
+
+.form-control input:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
 
 .form-control {
     margin-top: 1rem;
+}
+
+.form-control textarea {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    overflow: auto;
+    resize: vertical;
+    height: 8rem;
+}
+
+.form-control textarea:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
 .form-actions button {
@@ -62,3 +104,8 @@
     background: #01a7a7;
     border-color: #01a7a7;
 }
+
+.required>label:after {
+    content: "*";
+    color: rgb(231, 12, 12);
+} 

@@ -51,7 +51,7 @@ class AuthPage extends Component {
             };
         }
         console.log(requestBody);
-        fetch('http://localhost:8080/graphql', {
+        fetch('/graphql', {
             method: 'POST',
             body: JSON.stringify(requestBody),
             //Content-Type ensures that the backend tries to parse JSON from the body. 
