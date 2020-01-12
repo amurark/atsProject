@@ -7,7 +7,7 @@ import OverlayFrame from '../components/OverlayFrame/OverlayFrame.js';
 
 class HomePage extends Component {
     state = {
-        showAnimation: true
+        showAnimation: false
     }
 
     render() {

@@ -7,7 +7,7 @@ import Snowflake from './Snowflake';
 
 class OverlayFrame extends Component {
     state = {
-        id: 0,
+        idOffset: 0,
         snowflakes: []
     }
     
@@ -61,19 +61,19 @@ class OverlayFrame extends Component {
 
     createFlake = async (count) => {
         const self = this;
-        let id = self.state.id;
+        const offset = self.state.idOffset;
         const flakeList = self.state.snowflakes;
         let trimmedList = self.floatList.slice();
-
-        Array.from({length: count}, (v, k) => k+1).forEach(function(item, i) {
-            
+        let id = 0;
+        self.setState({
+            idOffset : offset + count,
+            snowflakes: flakeList
         });
-
         for(let i = 0; i < count; i++) {
-            let refreshList = await self.asynchronousAddition(self, id++, flakeList, trimmedList);
+            let refreshList = await self.asynchronousAddition(self, (offset + id++), flakeList, trimmedList);
             if(refreshList) trimmedList = self.floatList.slice();
             self.setState({
-                id : id,
+                idOffset : self.state.idOffset,
                 snowflakes: flakeList
             });
         }

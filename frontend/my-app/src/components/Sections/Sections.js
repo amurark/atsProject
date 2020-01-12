@@ -10,9 +10,9 @@ const section = props => {
         return (
             <div className={`section ${props.sectionClassName}`}>
                 <div className={`contentBox ${props.sectionClassName}`}>
-                    <h3>ankit</h3>
+                    <h2>ankit</h2>
                     <h2>travel</h2>
-                    <h1>services</h1>
+                    <h2>services</h2>
                 </div>
             </div>
         )
@@ -22,7 +22,16 @@ const section = props => {
             <div className="section">
                 <div className={`contentBox ${props.sectionClassName}`}>
                     <div className="headers">About Us</div>
-                    <p>We, at <b>Ankit Travel Services</b> ensure a perfect holiday for you. Right from international and domestic flight tickets to Hotel Bookings, cabs, buses, trains, cruise, tours and customized itenararies. You decide the time and destination. We will present to you the ultimate amalgamation of leisure, fun and adventure.</p>
+                    <p>
+                        We, at <b>Ankit Travel Services</b> ensure a perfect holiday for you. 
+                        We offer an entire spectrum of travel related services to our customers, 
+                        thus providing them a “One Stop Shop” facility so that all their travel related requirements
+                        are taken care of at a single point. 
+                        We provide best and fastest services using latest in Information Technology - Global Reservation System.
+                        Right from international and domestic flight tickets to Hotel Bookings, Transportion, Cruise, Tours and Customized Itineraries. 
+                        <br></br><br></br>You decide the time and destination and
+                        we will present to you the ultimate amalgamation of leisure, fun and adventure.
+                    </p>
                 </div>
             </div>
             
