@@ -1,0 +1,39 @@
+.chat-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 1rem;
+}
+
+.chat-box {
+    width: 20rem;
+    background: #d3d3d3;
+    padding: 0.1rem;
+    box-sizing: border-box;
+}
+
+.chat-box__header {
+    background: rgb(14, 12, 12);
+    width: 100%;
+    height: 2.6rem;
+    color: #d3d3d3;
+    text-align: left;
+    line-height: 2.6rem;
+    padding: 0 0.4rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.chat-box__body {
+    width: 100%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.expanded {
+    height: 20rem;
+}
+
+.collapsed {
+    height: 0;
+}

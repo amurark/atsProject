@@ -4,10 +4,12 @@ import './Home.css';
 
 import Sections from '../components/Sections/Sections.js';
 import OverlayFrame from '../components/OverlayFrame/OverlayFrame.js';
+import Chat from '../components/Chat/Chat.js';
 
 class HomePage extends Component {
     state = {
-        showAnimation: false
+        showAnimation: false,
+        devFeatures: false
     }
 
     render() {
@@ -25,6 +27,9 @@ class HomePage extends Component {
                 </div>
                 {this.state.showAnimation && (
                     <OverlayFrame />
+                )}
+                {this.state.devFeatures && (
+                    <Chat />
                 )}
             </React.Fragment>
             
