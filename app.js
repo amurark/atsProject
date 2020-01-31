@@ -14,7 +14,6 @@ const app = express();
 app.use(bodyParser.json());
 
 if(process.env.RUN_ENV === 'DEV') {
-    console.log("i am here");
     app.use(express.static(path.join(__dirname, 'frontend/my-app/public')));
 } else if(process.env.RUN_ENV === 'PROD') {
     app.use(express.static(path.join(__dirname, 'client')));
@@ -22,10 +21,14 @@ if(process.env.RUN_ENV === 'DEV') {
     console.error("Run environment not specified");
 }
 
-// TODO: Check if it works
-app.use(function(request, response){
-    if(!request.secure){
-        response.redirect("https://" + request.headers.host + request.url);
+// // TODO: Check if it works
+app.use((req, res, next) => {
+    if(process.env.RUN_ENV !== "DEV") {
+        if(!req.secure){
+            res.redirect("https://" + req.headers.host + req.url);
+        }
+    } else {
+        next();
     }
 });
 
@@ -58,7 +61,6 @@ app.use('/graphql', graphQlHttp(graphqlConfigObj));
 app.get('/', function(req, res) {
     console.log("here", process.env);
     if(process.env.RUN_ENV === 'DEV') {
-        console.log("here");
         res.sendFile(path.join(__dirname, 'frontend/my-app/public', 'index.html'));
     } else if(process.env.RUN_ENV === 'PROD') {
         res.sendFile(path.join(__dirname, 'client', 'index.html'));

@@ -50,7 +50,6 @@ class AuthPage extends Component {
                 `
             };
         }
-        console.log(requestBody);
         fetch('/graphql', {
             method: 'POST',
             body: JSON.stringify(requestBody),
@@ -73,7 +72,6 @@ class AuthPage extends Component {
                     resData.data.login.expirationField
                 );
             }
-            console.log(resData);
         })
         .catch(err => {
             console.log(err);

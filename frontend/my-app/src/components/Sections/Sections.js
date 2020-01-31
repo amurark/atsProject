@@ -1,9 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faStarHalf, faPlane, faBusAlt, faHotel, faShip, faSuitcaseRolling } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
 import './Sections.css';
 
 import Feedback from '../Feedback/Feedback';
+import Services from '../Services/Services';
 
 const section = props => {
     if(props.sectionType === "title") {
@@ -50,79 +51,7 @@ const section = props => {
         return (
             <div className="section">
                 <div className={`contentBox ${props.sectionClassName}`}>
-                    <div className="headers yellow-theme">Have a destination in mind. We will help you with all of these...</div>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div className="holder">
-                                        <div className="rotateContainer">
-                                            <div className="frontFace">
-                                                <FontAwesomeIcon icon={ faPlane } />
-                                            </div>
-                                            <div className="backFace">Flights</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="holder">
-                                        <div className="rotateContainer">
-                                            <div className="frontFace">
-                                                <FontAwesomeIcon icon={ faBusAlt } />
-                                            </div>
-                                            <div className="backFace">Transportion</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="holder">
-                                        <div className="rotateContainer">
-                                            <div className="frontFace">
-                                                <FontAwesomeIcon icon={ faHotel } />
-                                            </div>
-                                            <div className="backFace">Hotels</div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div className="holder">
-                                        <div className="rotateContainer">
-                                        <div className="frontFace">
-                                                <FontAwesomeIcon icon={ faShip } />
-                                            </div>
-                                            <div className="backFace">Cruises</div>
-                                        </div>
-                                    </div>
-                                    </td>
-                                <td>
-                                    <div className="holder">
-                                        <div className="rotateContainer">
-                                        <div className="frontFace">
-                                                <FontAwesomeIcon icon={ faBusAlt } />
-                                            </div>
-                                            <div className="backFace">Forex</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="holder">
-                                        <div className="rotateContainer">
-                                            <div className="frontFace">
-                                                <FontAwesomeIcon icon={ faSuitcaseRolling } />
-                                            </div>
-                                            <div className="backFace">Packages</div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <Services />
                 </div>
             </div>
             

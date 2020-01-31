@@ -6,6 +6,7 @@ import MainNavigation from './components/Navigation/MainNavigation';
 import HomePage from './pages/Home';
 import ProfilePage from './pages/Profile';
 import PromotionsPage from './pages/Promotions';
+import FeedbacksPage from './pages/Feedbacks';
 import AuthPage from './pages/Auth';
 import './App.css';
 
@@ -40,14 +41,26 @@ class App extends Component {
               {!this.state.token && (
                 <Route path="/auth" component={AuthPage} />
               )}
-              {!this.state.token && (
+              {this.state.token && (
                 <Route path="/profile" component={ProfilePage} />
               )}
+              {this.state.token && (
+                <Route path="/feedbacks" component={FeedbacksPage} />
+              )}
               <Route path="/promotions" component={PromotionsPage} />
+
+
               <Redirect path="/" to="/home" exact />
               {this.state.token && (
                 <Redirect path="/auth" to="/home" exact />
               )}
+              {!this.state.token && (
+                <Redirect path="/profile" to="/home" exact />
+              )}
+              
+              {/* TODO: Change */}
+              <Route path="/feedbacks" component={FeedbacksPage} />
+
               
             </Switch>
           </main>
