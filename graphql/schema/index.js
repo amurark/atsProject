@@ -6,6 +6,7 @@ module.exports = buildSchema(`
         email: String!
         userName: String
         password: String
+        isAdmin: Boolean
     }
 
     type AuthData {
@@ -13,10 +14,10 @@ module.exports = buildSchema(`
         userName: String!
         token: String!
         tokenExpiration: Int!
+        isAdmin: Boolean!
     }
 
     type Feedback {
-        _id: ID!
         email: String!
         name: String!
         ratings: Float!
@@ -39,9 +40,16 @@ module.exports = buildSchema(`
         subscribe: Boolean!
     }
 
+    input FilterInput {
+        key: String!
+        value: String!
+    }
+
 
     type RootQuery {
         login(email: String!, password: String!): AuthData!
+        retrieveFeedbacks(filter: FilterInput!): [Feedback!]!
+        retrieveAllFeedbacks: [Feedback!]!
     }
 
     type RootMutation {

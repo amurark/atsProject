@@ -14,7 +14,8 @@ module.exports = {
             const user = new User({
                 email: args.userInput.email,
                 password: await bcrypt.hash(args.userInput.password, 12),
-                userName: userName
+                userName: userName,
+                isAdmin: false
             });
             const newUser = await user.save();
             console.log("New user created.");
@@ -41,7 +42,8 @@ module.exports = {
                 userId: user.id,
                 userName: user.userName,
                 token: token,
-                tokenExpiration: 1
+                tokenExpiration: 1,
+                isAdmin: user.isAdmin
             }
         } catch(err) {
             throw err;

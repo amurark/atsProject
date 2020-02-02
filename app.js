@@ -59,7 +59,6 @@ if(process.env.RUN_ENV !== 'PROD') {
 app.use('/graphql', graphQlHttp(graphqlConfigObj));
 
 app.get('/', function(req, res) {
-    console.log("here", process.env);
     if(process.env.RUN_ENV === 'DEV') {
         res.sendFile(path.join(__dirname, 'frontend/my-app/public', 'index.html'));
     } else if(process.env.RUN_ENV === 'PROD') {
