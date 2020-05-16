@@ -1,6 +1,7 @@
 .services-section {
     position: relative;
     padding: 3rem 5rem;
+    overflow: hidden;
 }
 
 .services-wrapper {
@@ -29,6 +30,9 @@
     color:rgb(235, 209, 67)
 }
 
+.holderWrapper {
+    display: inline-block;
+}
 
 .holder {
     position: relative;
@@ -38,6 +42,7 @@
     color: rgb(42, 50, 62);
     /* text-shadow: 1px 1px 2px rgba(0,0,0,0.25); */
     cursor: grab;
+    top: 0;
 }
 
 .rotateContainer {
@@ -109,6 +114,9 @@
     color: #2a323e;
     transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
+
+    background-image: url("../../backgrounds/texture/bedge-grunge.png");
+    overflow: hidden;
 }
 
 .show {
@@ -159,6 +167,8 @@
     padding: 1rem;
     box-sizing: border-box;
     background: rgb(255, 255, 255);
+
+    background-image: url("../../backgrounds/texture/bedge-grunge.png");
 }
 
 .service-details-contentbox h2 {
@@ -170,4 +180,135 @@
     white-space: pre-wrap;
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+.service-details-contentbox__background {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.flights_transforms {
+    top: -10%;
+    right: -10%;
+    font-size: 20rem;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+.transport_transforms {
+    bottom: 0;
+    right: -10%;
+    font-size: 20rem;
+}
+
+.hotels_transforms {
+    bottom: -4%;
+    right: -6%;
+    font-size: 20rem;
+}
+
+.cruises_transforms {
+    bottom: -5%;
+    right: -15%;
+    font-size: 20rem;
+}
+
+.forex_transforms {
+    top: -8%;
+    right: -16%;
+    font-size: 30rem;
+}
+
+.tours_transforms {
+    bottom: -15px;
+    right: -8%;
+    font-size: 22rem;
+}
+
+.service-details-contentBox__details>li {
+    padding-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.pointer {
+    position: relative;
+    top: 0;
+    color: rgb(42, 50, 62);
+    top: 0;
+    float: right;
+    height: 8rem;
+    line-height: 8rem;
+    padding-left: 0.3rem;
+    color: #d3d3d3;
+}
+
+.pointer>svg:nth-child(1) {
+    font-size: 1rem;
+    padding-bottom: 0.1rem;
+    -webkit-animation: opacityChangeFirst 2s linear 0s infinite;
+    animation: opacityChangeFirst 2s linear 0s infinite;
+}
+
+.pointer>svg:nth-child(2) {
+    font-size: 1.1rem;
+    padding-bottom: 0.05rem;
+    -webkit-animation: opacityChangeSecond 2s linear 0s infinite;
+    animation: opacityChangeSecond 2s linear 0s infinite;
+}
+
+
+.pointer>svg:nth-child(3) {
+    font-size: 1.2rem;
+    -webkit-animation: opacityChangeThird 2s linear 0s infinite;
+    animation: opacityChangeThird 2s linear 0s infinite;
+}
+
+@keyframes opacityChangeFirst {
+    0% {
+      opacity: 0.2;
+    }
+    17% {
+      opacity: 1;
+    }
+    34% {
+      opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityChangeSecond {
+    0% {
+        opacity: 0;
+    }
+    34% {
+      opacity: 0.2;
+    }
+    51% {
+      opacity: 1;
+    }
+    68% {
+      opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityChangeThird {
+    0% {
+        opacity: 0;
+    }
+    68% {
+      opacity: 0.2;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
 }
