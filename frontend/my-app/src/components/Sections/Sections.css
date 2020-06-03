@@ -18,7 +18,7 @@
 }
 .company-title-animation {
     color: #e5e5e5;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     text-align: right;
     padding: 9rem 5rem;
     box-sizing: border-box;
@@ -71,11 +71,11 @@
 .about-us {
     background: rgba(255, 255, 255, 1);
     padding: 4rem;
-    font-size: 1.4rem;
+    font-size: 18px;
     border: 1px solid rgba(0,0,0,0.0.25);
     border-radius: 3px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
-    color: #505050;
+    color: #34353d;
     text-align: justify;
     font-weight: 100;
 }
@@ -90,30 +90,27 @@
 }
 
 .services {
-    background: rgb(42, 50, 62);
+    background: rgba(255, 255, 255, 1);
     /* For rectangles
     height: 20rem;*/
 }
 
 .testimonials {
-    background: #2E426C;
+    background: #fff;
     padding: 4rem;
     font-size: 1.5rem;
     height: 30rem;
     border: 1px solid rgba(0,0,0,.0.25);
     border-radius: 3px;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
-    color: rgba(34, 18, 18, 0.842);
 }
 
 .testimonialBox {
     margin: 0 5rem;
     height: 100%;
     padding: 2rem;
-    box-shadow:0 0 20px 0 rgba(0,0,0,0.5);
-    border: 8px double rgb(235, 209, 67);
+    border: 4px double #d3d3d3;
     box-sizing: border-box;
-    color: #d3d3d3;
+    color: #34353d;
 }
 
 .slider {
@@ -126,6 +123,7 @@
     text-align: center;
     font-weight: 400;
     margin: 0;
+    font-size: 28px;
 }
 
 .slider-text {
@@ -139,6 +137,8 @@
     max-height: 11rem;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-weight: 100;
+    font-size: 18px;
 }
 
 .slider-text1 {
@@ -162,7 +162,7 @@
 .stars {
     text-align: center;
     margin-top: 1rem;
-    color: #ffd700;
+    color: rgba(255, 123, 0);
 }
 
 .star {
@@ -170,7 +170,7 @@
 }
 
 .third-background {
-    background-image: url('../../backgrounds/third_background/beach.jpg');
+    background-image: url('../../backgrounds/third_background/cherry_blossom.jpg');
     height: 40rem;
     background-attachment: fixed;
     background-position: center;
@@ -179,17 +179,23 @@
 }
 
 .contact-us {
-    background: #34353d;
+    background: #222;
     padding: 4rem;
-    color: #0097f1;
+    color: #d3d3d3;
     text-align: center;
 }
-.contact-us h2 {
-    margin-top: 0;
+.company-logo {
+    background-image: url('../../backgrounds/ats-full.png');
+    width: 21rem;
+    height: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
 }
 
 .contact-us a {
-    color: #0097f1;
+    color: #d3d3d3;
     text-decoration: none;
 }
 

@@ -11,9 +11,7 @@ const mainNavigation = props => (
             (context) => {
                 return (
                     <header className="main-navigation">
-                        <NavLink className="main-navigation__logo" to="/home">
-                            <h1>Ankit Travel Services</h1>
-                        </NavLink>
+                        <NavLink className="main-navigation__logo" to="/home"></NavLink>
                         <nav className="main-navigation__items">
                             <ul>
                                 <li>

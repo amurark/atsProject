@@ -29,7 +29,6 @@
 }
 
 .form-control label {
-    width: 100%;
     display: block;
     margin-bottom: 0.2rem;
     font-size: 1.2rem;
@@ -95,7 +94,7 @@
     border-radius: 3px;
     padding: 0.25rem 1rem;
     color: #fff;
-    margin-right: 1rem;
+    margin: 1rem 1rem 0 0;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
 }
 
@@ -109,3 +108,51 @@
     content: "*";
     color: rgb(231, 12, 12);
 } 
+
+
+.inline {
+    display: inline-block !important;
+}
+
+.radioButton {
+    width: 2rem !important;
+}
+
+.submitButton {
+    font-size: 18px !important;
+}
+
+.statusBox {
+    position: relative;
+    display: inline-block;
+    height: 1.5rem;
+    width: 10rem;
+    top: 0;
+    background: red;
+    margin: 0.2rem;
+    font-size: 14px;
+    color: #fff;
+    border: 2px solid;
+    line-height: 1.5rem;
+    text-align: center;
+    padding: 0.2rem;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+
+.showStatus {
+    left: 60%;
+}
+.hideStatus {
+    left: 110%;
+}
+
+.successBox {
+    background: rgba(46, 143, 89, 0.8);
+    border-color: rgb(46, 143, 89);
+}
+
+.errorBox {
+    background: rgba(172, 0, 0, 0.8);
+    border-color: rgb(172, 0, 0);
+}

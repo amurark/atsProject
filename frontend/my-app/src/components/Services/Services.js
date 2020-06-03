@@ -31,7 +31,10 @@ class Services extends Component {
                     "Group fares",
                     "Business Class Bookings",
                     "First Class Bookings"
-                ]
+                ],
+                style: {
+                    color: "#C33C54"
+                }
             },
             {
                 name: "Transport",
@@ -40,7 +43,10 @@ class Services extends Component {
                 details: [
                     "All ranges of vehicles for Domestic & International Travel",
                     "Chauffeur Driven Cabs - SUV, Luxury, Sedans"
-                ]
+                ],
+                style: {
+                    color: "#004BA8"
+                }
             },
             {
                 name: "Hotels",
@@ -52,7 +58,10 @@ class Services extends Component {
                     "Budget Hotels",
                     "Heritage Resorts",
                     "SPA Centres"
-                ]
+                ],
+                style: {
+                    color: "#EE964B"
+                }
             },
             {
                 name: "Cruises",
@@ -65,17 +74,23 @@ class Services extends Component {
                     "Cunard",
                     "NCL",
                     "MSC Cruises"
-                ]
+                ],
+                style: {
+                    color: "#F4D35E"
+                }
             },
             {
-                name: "Forex",
                 icon: <FontAwesomeIcon icon={ faDollarSign } />,
+                name: "Forex",
                 header: "Currency Exchange",
                 details: [
                     "Foreign currency notes",
                     "Forex Cards",
                     "Various currencies viz. Dollars, Euros, Pounds, Dirham etc."
-                ]
+                ],
+                style: {
+                    color: "#48A9A6"
+                }
             },
             {
                 name: "Tours",
@@ -89,7 +104,10 @@ class Services extends Component {
                     "Adventure Tours",
                     "Wildlife Safari",
                     "Dessert Safari"
-                ]
+                ],
+                style: {
+                    color: "#6969B3"
+                }
             }
         ];
     }
@@ -114,26 +132,26 @@ class Services extends Component {
         return (
             <React.Fragment>
                 <div className="services-section">
-                    <div className="headers white-theme">Have a destination in mind. We will help you with all of these...</div>
+                    <div className="headers white-theme">Have a destination in mind? We will help you with the rest!</div>
                     <ul className="services-wrapper">
                         {
                             this.services.map((service, index) => {
                                 return  (
                                     <li key={index} className="service-wrapper">
                                         <div className="holderWrapper">
+                                            <div className="holder" onClick={this.renderServiceInformation.bind(this, index)}>
+                                                <div className="rotateContainer">
+                                                    <div style={service.style} className="frontFace">{ service.icon }</div>
+                                                    <div style={service.style} className="backFace">{ service.name }</div>
+                                                </div>
+                                            </div>
                                             { service.name === this.state.serviceDetails.name && 
-                                                <div className="pointer">
+                                                <div style={service.style} className="pointer">
                                                     <FontAwesomeIcon icon={ faChevronRight } />
                                                     <FontAwesomeIcon icon={ faChevronRight } />
                                                     <FontAwesomeIcon icon={ faChevronRight } />
                                                 </div> 
                                             }
-                                            <div className="holder" onClick={this.renderServiceInformation.bind(this, index)}>
-                                                <div className="rotateContainer">
-                                                    <div className="frontFace">{ service.icon }</div>
-                                                    <div className="backFace">{ service.name }</div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </li>
                                 )
@@ -145,7 +163,7 @@ class Services extends Component {
                             <FontAwesomeIcon icon={ faChevronRight } />
                         </div>
                         <div className="service-details-contentbox">
-                            <div className={`service-details-contentbox__background ${this.state.serviceDetails.name.toLowerCase()}_transforms `}>{ this.state.serviceDetails.icon }</div>
+                            <div style={this.state.serviceDetails.style} className={`service-details-contentbox__background ${this.state.serviceDetails.name.toLowerCase()}_transforms `}>{ this.state.serviceDetails.icon }</div>
                             <h2>{ this.state.serviceDetails.header }</h2>
                             <ul className="service-details-contentBox__details">
                                 {

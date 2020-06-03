@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarR } from "@fortawesome/free-regular-svg-icons";
 import './Sections.css';
 
 import Feedback from '../Feedback/Feedback';
@@ -24,13 +25,13 @@ const section = props => {
                 <div className={`contentBox ${props.sectionClassName}`}>
                     <div className="headers">About Us</div>
                     <p>
-                        We, at <b>Ankit Travel Services</b> ensure a perfect holiday for you. 
-                        We offer an entire spectrum of travel related services to our customers, 
-                        thus providing them a “One Stop Shop” facility so that all their travel related requirements
+                        At <span style={{"color": "#ef7f13", "fontWeight": "400"}}>ats</span>, we ensure a perfect holiday for you. 
+                        We offer an entire spectrum of travel related services, 
+                        thus providing a “One Stop Shop” facility so that all your travel related requirements
                         are taken care of at a single point. 
-                        We provide best and fastest services using latest in Information Technology - Global Reservation System.
-                        Right from international and domestic flight tickets to Hotel Bookings, Transportion, Cruise, Tours and Customized Itineraries. 
-                        <br></br><br></br>You decide the time and destination and
+                        We provide the best and fastest services using the latest in technology - Global Reservation System.
+                        <br></br><br></br>From international and domestic flight tickets to Hotel Bookings, Transportion, Cruise, Tours and Customized Itineraries -
+                        you decide the time and destination, and
                         we will present to you the ultimate amalgamation of leisure, fun and adventure.
                     </p>
                 </div>
@@ -75,10 +76,10 @@ const section = props => {
                         <div className="slider-text slider-text1">
                             <h2>Had a wonderful time with the family.</h2>
                             <div className="stars">
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
                             </div>
                             <p>
                                 "With everything under one roof, you can use ATS to scour the Web to find deals on flights, hotel rooms, and rental cars. One of the best features about this travel Website are the pricing trends and the predictive algorithms on where prices are going - up or down. You can use the information gleaned to assess your options for buying now or holding off.
@@ -90,11 +91,11 @@ const section = props => {
                         <div className="slider-text">
                             <h2>Intriguing Experience. Will definitely try again.</h2>
                             <div className="stars">
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStarHalf} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
                             </div>
                             <p>
                                 "ATS is by far one of the best travel Websites for sourcing travel deals with one of the most intuitive meta search engines for pricing flights, hotels, and rental cars. Similar to Kayak, you can also setup travel alerts here to notify you when prices change.
@@ -106,11 +107,11 @@ const section = props => {
                         <div className="slider-text">
                             <h2>One of the best trips ever.</h2>
                             <div className="stars">
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
-                                <FontAwesomeIcon className="star" icon={faStar} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
+                                <FontAwesomeIcon className="star" icon={faStarR} />
                             </div>
                             <p>
                                 "With everything under one roof, you can use ATS to scour the Web to find deals on flights, hotel rooms, and rental cars. One of the best features about this travel Website are the pricing trends and the predictive algorithms on where prices are going - up or down. You can use the information gleaned to assess your options for buying now or holding off.
@@ -141,7 +142,7 @@ const section = props => {
             <div className="section">
                 <div className={`contentBox ${props.sectionClassName}`}>
                     <div>
-                        <h2>Ankit Travel Services</h2>
+                        <div className="company-logo"></div>
                         <p>818 VikasDeep Building, 18, Laxmi Nagar District Center</p>
                         <p>atsdel@gmail.com | travel@ankitindia.net</p>
                         <p>+91-4244 8417 | +91-4244 8418</p>

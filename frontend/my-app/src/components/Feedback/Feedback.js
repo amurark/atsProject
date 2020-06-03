@@ -6,6 +6,14 @@ import Ratings from '../Ratings/Ratings';
 
 class Feedback extends Component {
 
+    state = {
+        status: {
+            msg: "",
+            type: "",
+            show: false
+        }
+    }
+
     constructor(props) {
         super(props);
         this.nameEl = React.createRef();
@@ -17,9 +25,8 @@ class Feedback extends Component {
         this.subscribeEl = React.createRef();
     }
 
-    submitHandler = (event) => {
+    submitHandler = event => {
         event.preventDefault();
-
         const name = this.nameEl.current.value;
         const email = this.emailEl.current.value;
         const phone = this.phoneEl.current.value;
@@ -44,7 +51,6 @@ class Feedback extends Component {
                         feedback: "${feedback}",
                         subscribe: ${doSubscribe}
                 }) {
-                    _id
                     email
                     name
                     ratings
@@ -55,7 +61,6 @@ class Feedback extends Component {
               }
             `
         };
-        console.log(JSON.stringify(requestBody, null, 2));
         fetch('/graphql', {
             method: 'POST',
             body: JSON.stringify(requestBody),
@@ -71,12 +76,48 @@ class Feedback extends Component {
             return res.json();
         })
         .then(resData => {
-            console.log(resData);
+            console.log("Successfully added a feedback");
+            this.showStatus(false, "Successfully submitted!");
+            this.clearForm();
         })
         .catch(err => {
             console.log(err);
         });
+    }
 
+    showStatus = (isError, msg) => {
+        const timeoutVal = 5;
+        const self = this;
+        self.setState(prevState => {
+            return {
+                status: {
+                    msg: msg,
+                    type: isError ? "error" : "success",
+                    show: true    
+                }
+            }
+        });
+
+        setTimeout(function() {
+            self.setState(prevState => {
+                return {
+                    status: {
+                        msg: "",
+                        type: "",
+                        show: false
+                    }
+                }
+            });
+        }, timeoutVal * 1000)
+    }
+
+    clearForm = () => {
+        this.nameEl.current.value = "";
+        this.emailEl.current.value = "";
+        this.phoneEl.current.value = "";
+        this.ratingsEl.current.finalRating = 0;
+        this.feedbackEl.current.value = "";
+        this.destinationEl.current.value = "";
     }
 
 
@@ -109,12 +150,13 @@ class Feedback extends Component {
                     <textarea placeholder="Describe your experience..." type="feedback" id="feedback" ref={this.feedbackEl} required/>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="subscribe">Subscribe for promotions.</label>
-                    <input type="checkbox" value="subscribed" id="subscribe" defaultChecked ref={this.subscribeEl}/>
+                    <label className="inline" htmlFor="subscribe">Subscribe for promotions.</label>
+                    <input className="inline radioButton" type="checkbox" value="subscribed" id="subscribe" defaultChecked ref={this.subscribeEl}/>
                 </div>
                 <div className="form-actions">
-                    <button type="submit">Submit</button>
+                    <button className="submitButton" type="submit">Submit</button>
                 </div>
+                <div className={`statusBox ${this.state.status.show ? "showStatus" : "hideStatus"} ${this.state.status.type === "error" ? "errorBox" : "successBox"}`}>{ this.state.status.msg }</div>
             </form>
         ) 
     }

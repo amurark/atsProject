@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     background-color: #efefef;
-    background-image: url('../backgrounds/landing/nature_free.jpg');
+    background-image: url('../backgrounds/landing/norway-l.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow: scroll;
@@ -13,5 +13,5 @@
 
 .headers {
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
 }
