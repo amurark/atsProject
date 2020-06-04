@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlane, faBusAlt, faLandmark, faShip, faSuitcaseRolling, faDollarSign, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faPlane, faBusAlt, faHotel, faShip, faSuitcaseRolling, faDollarSign, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { GiCruiser } from 'react-icons/gi';
+import { FaPlane } from 'react-icons/fa';
 import './Services.css';
 
 class Services extends Component {
@@ -22,7 +24,7 @@ class Services extends Component {
         this.services = [
             {
                 name: "Flights",
-                icon: <FontAwesomeIcon icon={ faPlane } />,
+                icon: <FaPlane />,
                 header: "Air Tickets",
                 details: [
                     "International Flight Tickets",
@@ -33,7 +35,8 @@ class Services extends Component {
                     "First Class Bookings"
                 ],
                 style: {
-                    color: "#C33C54"
+                    color: "#C33C54",
+                    fontSize: "2rem"
                 }
             },
             {
@@ -45,12 +48,13 @@ class Services extends Component {
                     "Chauffeur Driven Cabs - SUV, Luxury, Sedans"
                 ],
                 style: {
-                    color: "#004BA8"
+                    color: "#004BA8",
+                    fontSize: "2rem"
                 }
             },
             {
                 name: "Hotels",
-                icon: <FontAwesomeIcon icon={ faLandmark } />,
+                icon: <FontAwesomeIcon icon={ faHotel } />,
                 header: "Hotel Bookings",
                 details: [
                     "Worldwide Hotel Reservations",
@@ -60,12 +64,13 @@ class Services extends Component {
                     "SPA Centres"
                 ],
                 style: {
-                    color: "#EE964B"
+                    color: "#EE964B",
+                    fontSize: "2rem"
                 }
             },
             {
                 name: "Cruises",
-                icon: <FontAwesomeIcon icon={ faShip } />,
+                icon: <GiCruiser />,
                 header: "Worldwide Cruises",
                 details: [
                     "Star Cruise",
@@ -76,7 +81,8 @@ class Services extends Component {
                     "MSC Cruises"
                 ],
                 style: {
-                    color: "#F4D35E"
+                    color: "#385F71",
+                    fontSize: "3rem"
                 }
             },
             {
@@ -89,7 +95,8 @@ class Services extends Component {
                     "Various currencies viz. Dollars, Euros, Pounds, Dirham etc."
                 ],
                 style: {
-                    color: "#48A9A6"
+                    color: "#48A9A6",
+                    fontSize: "2rem"
                 }
             },
             {
@@ -106,7 +113,8 @@ class Services extends Component {
                     "Dessert Safari"
                 ],
                 style: {
-                    color: "#6969B3"
+                    color: "#6969B3",
+                    fontSize: "2rem"
                 }
             }
         ];

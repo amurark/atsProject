@@ -78,7 +78,6 @@
     color: rgb(223, 44, 88); */
     border: 10px double #d3d3d3;
     color: #d3d3d3;
-    font-size: 2rem;
     border-radius: 8rem;
     box-sizing: border-box;
     /* box-shadow: 0px 0px 20px rgba(0,0,0,0.8); */
@@ -104,6 +103,7 @@
     font-size: 1.2rem;
     line-height: calc(8rem - 4px);
     color: rgb(51, 43, 43);
+    font-size: 1.2rem !important;
 }
 
 .service-details {
@@ -191,9 +191,9 @@
 }
 
 .flights_transforms {
-    top: -10%;
-    right: -10%;
-    font-size: 20rem;
+    top: -20%;
+    right: -5%;
+    font-size: 20rem !important;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     transform-origin: center;
@@ -203,31 +203,31 @@
 .transport_transforms {
     bottom: 0;
     right: -10%;
-    font-size: 20rem;
+    font-size: 20rem !important;
 }
 
 .hotels_transforms {
     bottom: -4%;
     right: -6%;
-    font-size: 20rem;
+    font-size: 20rem !important;
 }
 
 .cruises_transforms {
     bottom: -5%;
     right: -15%;
-    font-size: 20rem;
+    font-size: 20rem !important;
 }
 
 .forex_transforms {
     top: -8%;
-    right: -16%;
-    font-size: 30rem;
+    right: -5%;
+    font-size: 25rem !important;
 }
 
 .tours_transforms {
     bottom: -15px;
     right: -8%;
-    font-size: 22rem;
+    font-size: 22rem !important;
 }
 
 .service-details-contentBox__details>li {

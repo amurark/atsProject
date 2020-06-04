@@ -70,16 +70,20 @@ app.get('/', function(req, res) {
 
 //TODO: Change mongo URL later. 
 console.log(`Connecting to DB: ${process.env.MONGO_DB}`);
-mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_URL}/${process.env.MONGO_DB}?retryWrites=true&w=majority`)
-        .then(() => {
-            const port = process.env.PORT || 8080;
-            console.log(`Connected to the database. Serving at port ${port}...`);
-            app.listen(port);
-            // setupGoogleReviewIntegration();
-        })
-        .catch(err => {
-            console.log(err);
-        });
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_URL}/${process.env.MONGO_DB}?retryWrites=true&w=majority`,
+                { 
+                    useNewUrlParser: true,
+                    useUnifiedTopology: true
+                })
+                .then(() => {
+                    const port = process.env.PORT || 8080;
+                    console.log(`Connected to the database. Serving at port ${port}...`);
+                    app.listen(port);
+                    // setupGoogleReviewIntegration();
+                })
+                .catch(err => {
+                    console.log(`DB Connection Error: ${err.message}`);
+                });
 
 
 
