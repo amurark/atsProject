@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 
 if(process.env.RUN_ENV === 'DEV') {
-    app.use(express.static(path.join(__dirname, 'frontend/my-app/public')));
+    app.use(express.static(path.join(__dirname, 'client/build')));
 } else if(process.env.RUN_ENV === 'PROD') {
     app.use(express.static(path.join(__dirname, 'client')));
 } else {
@@ -58,9 +58,9 @@ if(process.env.RUN_ENV !== 'PROD') {
 
 app.use('/graphql', graphQlHttp(graphqlConfigObj));
 
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
     if(process.env.RUN_ENV === 'DEV') {
-        res.sendFile(path.join(__dirname, 'frontend/my-app/public', 'index.html'));
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     } else if(process.env.RUN_ENV === 'PROD') {
         res.sendFile(path.join(__dirname, 'client', 'index.html'));
     } else {
