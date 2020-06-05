@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --trace-warnings app.js"
+    "start-dev": "nodemon --trace-warnings app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
