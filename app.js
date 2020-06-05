@@ -21,16 +21,16 @@ if(process.env.RUN_ENV === 'DEV') {
     console.error("Run environment not specified");
 }
 
-// // TODO: Check if it works
-app.use((req, res, next) => {
-    if(process.env.RUN_ENV !== "DEV") {
-        if(!req.secure){
-            res.redirect("https://" + req.headers.host + req.url);
-        }
-    } else {
-        next();
-    }
-});
+// // TODO: Check if it works - It doesnt work. 
+// app.use((req, res, next) => {
+//     if(process.env.RUN_ENV !== "DEV") {
+//         if(!req.secure){
+//             res.redirect("https://" + req.headers.host + req.url);
+//         }
+//     } else {
+//         next();
+//     }
+// });
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
