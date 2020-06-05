@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 if(process.env.RUN_ENV === 'DEV') {
     app.use(express.static(path.join(__dirname, 'client/build')));
 } else if(process.env.RUN_ENV === 'PROD') {
-    app.use(express.static(path.join(__dirname, 'client')));
+    app.use(express.static(path.join(__dirname, 'client/build')));
 } else {
     console.error("Run environment not specified");
 }
@@ -62,7 +62,7 @@ app.get('*', function(req, res) {
     if(process.env.RUN_ENV === 'DEV') {
         res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     } else if(process.env.RUN_ENV === 'PROD') {
-        res.sendFile(path.join(__dirname, 'client', 'index.html'));
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     } else {
         console.error("Run environment not specified");
     }
