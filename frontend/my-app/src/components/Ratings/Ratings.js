@@ -20,6 +20,13 @@ class Ratings extends Component {
         this.finalRating = 0.0;
     }
 
+    reinitialize = () => {
+        this.setState(prevState => {
+            return {isLeft: false, isRight: false, count: 0, submitted: false};
+        });
+        this.finalRating = 0.0;
+    }
+
     submitRatings = (index, event) => {
         let finalRating;
         if(event.target.className === 'before-element') {

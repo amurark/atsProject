@@ -13,6 +13,28 @@
     background-position: bottom;
 }
 
+.form-wrapper{
+    height: 100%;
+    width: 30rem;
+    float: right;
+    overflow: hidden;
+}
+
+.auth-form-feedback {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    float: right;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    color: rgba(34, 18, 18, 0.8);
+    overflow: auto;
+}
+
 .auth-form {
     background: rgba(255, 255, 255, 0.5);
     width: 30rem;
@@ -127,7 +149,7 @@
     display: inline-block;
     height: 1.5rem;
     width: 10rem;
-    top: 0;
+    bottom: 4rem;
     background: red;
     margin: 0.2rem;
     font-size: 14px;
@@ -155,4 +177,11 @@
 .errorBox {
     background: rgba(172, 0, 0, 0.8);
     border-color: rgb(172, 0, 0);
+}
+
+.progress-bar {
+    position: relative;
+    bottom: 3.5rem;
+    height: 0.5rem;
+    background: rgb(32, 103, 255);
 }
