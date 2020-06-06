@@ -1,11 +1,9 @@
 import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
-import { faStar as faStarR } from "@fortawesome/free-regular-svg-icons";
 import './Sections.css';
 
 import Feedback from '../Feedback/Feedback';
 import Services from '../Services/Services';
+import Testimonials from '../Testimonials/Testimonials';
 
 const section = props => {
     if(props.sectionType === "title") {
@@ -71,62 +69,10 @@ const section = props => {
         return (
             <div className="section">
                 <div className={`contentBox ${props.sectionClassName}`}>
-                    <div className="testimonialBox">
-                    <div className="slider">
-                        <div className="slider-text slider-text1">
-                            <h2>Had a wonderful time with the family.</h2>
-                            <div className="stars">
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                            </div>
-                            <p>
-                                "With everything under one roof, you can use ATS to scour the Web to find deals on flights, hotel rooms, and rental cars. One of the best features about this travel Website are the pricing trends and the predictive algorithms on where prices are going - up or down. You can use the information gleaned to assess your options for buying now or holding off.
-
-                                Another great feature? Use ATS’s travel alerts to email you when deals pop up for your intended destination. You can also search using a range of dates (i.e. 3 days before or after your departure and arrival dates) to find the best price on deals."
-                            </p>
-                            <h2 className="testimonial-name">- Rakesh Singh</h2>
-                        </div>
-                        <div className="slider-text">
-                            <h2>Intriguing Experience. Will definitely try again.</h2>
-                            <div className="stars">
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                            </div>
-                            <p>
-                                "ATS is by far one of the best travel Websites for sourcing travel deals with one of the most intuitive meta search engines for pricing flights, hotels, and rental cars. Similar to Kayak, you can also setup travel alerts here to notify you when prices change.
-
-                                While you can’t book flights directly on ATS (whereas you can on Kayak), you’ll find the resource to be invaluable. Use it in conjunction with Kayak and other sites to ensure that you’re finding the best deals for a particular trip."
-                            </p>
-                            <h2 className="testimonial-name">- Margott Ritchie</h2>
-                        </div>
-                        <div className="slider-text">
-                            <h2>One of the best trips ever.</h2>
-                            <div className="stars">
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                                <FontAwesomeIcon className="star" icon={faStarR} />
-                            </div>
-                            <p>
-                                "With everything under one roof, you can use ATS to scour the Web to find deals on flights, hotel rooms, and rental cars. One of the best features about this travel Website are the pricing trends and the predictive algorithms on where prices are going - up or down. You can use the information gleaned to assess your options for buying now or holding off.
-
-                                Another great feature? Use ATS’s travel alerts to email you when deals pop up for your intended destination. You can also search using a range of dates (i.e. 3 days before or after your departure and arrival dates) to find the best price on deals."
-                            </p>
-                            <h2 className="testimonial-name">- Brijesh Patel</h2>
-                        </div>
-                    </div>
-                    
-                    </div>
+                    <Testimonials />
                 </div>
             </div>
-            
-        );
+        )
     }
     else if(props.sectionType === "thirdBackground") {
         return (
@@ -134,7 +80,6 @@ const section = props => {
                 <div className={`contentBox ${props.sectionClassName}`}>
                 </div>
             </div>
-            
         );
     }
     else if(props.sectionType === "contactUs") {
@@ -146,7 +91,18 @@ const section = props => {
                         <p>818 VikasDeep Building, 18, Laxmi Nagar District Center</p>
                         <p>atsdel@gmail.com | travel@ankitindia.net</p>
                         <p>+91-4244 8417 | +91-4244 8418</p>
-                        <a href="/"> Subscribe to our mailing list</a>
+                        <div>
+                            <div className="socialHandlesWrapper socialHandlesWrapperBorder">
+                                <a href="https://www.facebook.com/vikas.murarka.50" target="_blank">
+                                    <div className="socialHandles fbHandle"></div>
+                                </a>
+                            </div>
+                            <div className="socialHandlesWrapper">
+                                <a href="https://www.instagram.com/vikasmurarka_ats/" target="_blank">
+                                    <div className="socialHandles instaHandle"></div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

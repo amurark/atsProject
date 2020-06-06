@@ -15,7 +15,7 @@ class HomePage extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="wrapper">
+                <div id="site-wrapper" className="wrapper">
                     <Sections sectionType={"title"} sectionClassName={"company-title-animation"}/>
                     <Sections sectionType={"aboutUs"} sectionClassName={"about-us"}/>
                     {/* <Sections sectionType={"secondBackground"} sectionClassName={"second-background"}/> */}

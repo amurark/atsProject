@@ -202,3 +202,35 @@
 .contact-us a:hover {
     text-decoration: underline;
 }
+
+.socialHandlesWrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 8px 0 2px;
+}
+
+.socialHandlesWrapperBorder {
+    border-right: 1px solid #d3d3d3;
+}
+
+.socialHandlesWrapper a {
+    display: block;
+}
+.socialHandles {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fbHandle {
+    background-image: url('../../backgrounds/fb.png');
+    width: 35px;
+    height: 35px;
+}
+.instaHandle {
+    background-image: url('../../backgrounds/insta.png');
+    width: 45px;
+    height: 45px;
+    top: -5px;
+}
