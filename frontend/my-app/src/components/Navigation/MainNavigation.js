@@ -14,14 +14,14 @@ const mainNavigation = props => (
                         <NavLink className="main-navigation__logo" to="/home"></NavLink>
                         <nav className="main-navigation__items">
                             <ul>
-                                <li>
+                                {/*<li>
                                     <NavLink to="/promotions">Promotions</NavLink>
                                 </li>
                                 {!context.token && (
                                     <li>
                                         <NavLink to="/auth">Login</NavLink>
                                     </li>
-                                )}
+                                )}*/}
                                 {context.token && (
                                     <React.Fragment>
                                         <li>

@@ -25,32 +25,17 @@
     height: 100%;
 }
 
-.company-title-animation h1,
-.company-title-animation h2,
-.company-title-animation h3 {
+.company-title-animation h2 {
     margin: 0;
     display: block;
     font-weight: 400;
 }
-.company-title-animation h1 {
-    font-size: 5rem;
-    /* line-height: 5rem; */
-    line-height: 4rem; /* Modified */
-    animation: slide2 2s ease-in 0s 1 normal;
-    -webkit-animation: slide2 2s ease-in 0s 1 normal;
-}
 .company-title-animation h2 {
     font-size: 4.5rem;
     /* line-height: 4.5rem;*/
-    line-height: 3.5rem; /*modified */
+    line-height: 4rem; /*modified */
     animation: slide2-5 2s ease-in 0s 1 normal;
     -webkit-animation: slide2-5 2s ease-in 0s 1 normal;
-}
-.company-title-animation h3 {
-    font-size: 4rem;
-    line-height: 4rem;
-    animation: slide4 2s ease-in 0s 1 normal;
-    -webkit-animation: slide4 2s ease-in 0s 1 normal;
 }
 
 @keyframes slide2 {
@@ -145,6 +130,19 @@
     animation: slideHorizontal 15s linear infinite;
 }
 
+@media (max-width: 600px) {
+    .testimonials {
+        padding: 1rem;
+    }
+    .testimonialBox {
+        margin: 0;
+        padding: 1rem;
+    }
+    .slider-text {
+        padding: 0;
+    }
+}
+
 @keyframes slideHorizontal {
     0% {margin-top: -87rem;}
     5% {margin-top: -58rem;}
@@ -180,10 +178,16 @@
 
 .contact-us {
     background: #222;
-    padding: 4rem;
+    padding: 2rem;
     color: #d3d3d3;
     text-align: center;
 }
+
+.companyDetails p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 .company-logo {
     background-image: url('../../backgrounds/ats-full.png');
     width: 21rem;
@@ -233,4 +237,10 @@
     width: 45px;
     height: 45px;
     top: -5px;
+}
+
+.locationMap {
+    width:"600";
+    height:"450";
+    border: none
 }

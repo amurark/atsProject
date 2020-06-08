@@ -29,10 +29,10 @@ class Services extends Component {
                 details: [
                     "International Flight Tickets",
                     "Domestic Flight Tickets",
-                    "SOTO fares",
+                    "Sector fares",
                     "Group fares",
-                    "Business Class Bookings",
-                    "First Class Bookings"
+                    "SOTO tickets - journeys originating outside India",
+                    "First/Business Class Bookings"
                 ],
                 style: {
                     color: "#C33C54",
@@ -44,8 +44,9 @@ class Services extends Component {
                 icon: <FontAwesomeIcon icon={ faBusAlt } />,
                 header: "Transport Services",
                 details: [
-                    "All ranges of vehicles for Domestic & International Travel",
-                    "Chauffeur Driven Cabs - SUV, Luxury, Sedans"
+                    "Domestic/International travel – entire fleet of vehicles (SUV/Luxury Sedan/Limousine",
+                    "Self driven/Chauffeur driven cars",
+                    "Mini Vans and coaches – all configuration"
                 ],
                 style: {
                     color: "#004BA8",
@@ -57,11 +58,11 @@ class Services extends Component {
                 icon: <FontAwesomeIcon icon={ faHotel } />,
                 header: "Hotel Bookings",
                 details: [
-                    "Worldwide Hotel Reservations",
-                    "7 Star Hotels",
+                    "Worldwide Hotel Bookings",
                     "Budget Hotels",
+                    "7 Star Hotels",
                     "Heritage Resorts",
-                    "SPA Centres"
+                    "SPAs"
                 ],
                 style: {
                     color: "#EE964B",
@@ -73,12 +74,13 @@ class Services extends Component {
                 icon: <GiCruiser />,
                 header: "Worldwide Cruises",
                 details: [
+                    "Celebrity Cruise",
+                    "Dream Cruise",
+                    "Norwegian Cruise Line",
+                    "Royal Caribbean International",
                     "Star Cruise",
-                    "Royal Caribbean",
-                    "Prince Cruise",
-                    "Cunard",
-                    "NCL",
-                    "MSC Cruises"
+                    "Other major ocean/river cruise lines viz. Azmara, Princess",
+                    "Jalesh Cruise (Domestic)"
                 ],
                 style: {
                     color: "#385F71",
@@ -90,9 +92,9 @@ class Services extends Component {
                 name: "Forex",
                 header: "Currency Exchange",
                 details: [
-                    "Foreign currency notes",
+                    "Foreign currency notes - all tradeable currencies",
                     "Forex Cards",
-                    "Various currencies viz. Dollars, Euros, Pounds, Dirham etc."
+                    "Foreign Remittance - student fee, family support etc."
                 ],
                 style: {
                     color: "#48A9A6",
@@ -104,13 +106,15 @@ class Services extends Component {
                 icon: <FontAwesomeIcon icon={ faSuitcaseRolling } />,
                 header: "Tours",
                 details: [
-                    "Packages",
+                    "Customised Packages",
                     "Honeymoon Packages",
                     "Leisure Travel",
                     "Special Interest Tours",
                     "Adventure Tours",
-                    "Wildlife Safari",
-                    "Dessert Safari"
+                    "Business/Corporate Tours",
+                    "Incentive Tours",
+                    "Pilgrimage Tours - Chardham/Amarnath/Kailash Mansarovar etc.",
+                    "Wildlife/Desert Safari"
                 ],
                 style: {
                     color: "#6969B3",

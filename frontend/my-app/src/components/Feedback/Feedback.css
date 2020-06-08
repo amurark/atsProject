@@ -35,6 +35,16 @@
     overflow: auto;
 }
 
+@media (max-width: 600px) {
+    .reviews {
+        padding: 1rem;
+    }
+    .form-wrapper {
+        float: none;
+        width: 100%;
+    }
+}
+
 .auth-form {
     background: rgba(255, 255, 255, 0.5);
     width: 30rem;

@@ -10,9 +10,9 @@ const section = props => {
         return (
             <div className={`section ${props.sectionClassName}`}>
                 <div className={`contentBox ${props.sectionClassName}`}>
-                    <h2>ankit</h2>
-                    <h2>travel</h2>
-                    <h2>services</h2>
+                    <h2>Ankit</h2>
+                    <h2>Travel</h2>
+                    <h2>Services</h2>
                 </div>
             </div>
         )
@@ -23,14 +23,9 @@ const section = props => {
                 <div className={`contentBox ${props.sectionClassName}`}>
                     <div className="headers">About Us</div>
                     <p>
-                        At <span style={{"color": "#ef7f13", "fontWeight": "400"}}>ats</span>, we ensure a perfect holiday for you. 
-                        We offer an entire spectrum of travel related services, 
-                        thus providing a “One Stop Shop” facility so that all your travel related requirements
-                        are taken care of at a single point. 
-                        We provide the best and fastest services using the latest in technology - Global Reservation System.
-                        <br></br><br></br>From international and domestic flight tickets to Hotel Bookings, Transportion, Cruise, Tours and Customized Itineraries -
-                        you decide the time and destination, and
-                        we will present to you the ultimate amalgamation of leisure, fun and adventure.
+                        Operating since 2002 from the eastern ghats of the River Yamuna in New Delhi, India, we offer an entire spectrum of travel related services, providing a one-stop-shop for all your vacation needs. We extend prompt assistance using cutting-edge Global Reservation Systems.
+                        <br></br><br></br>
+                        From domestic to worldwide travel arrangements – you decide the date and destination, and we will present to you, tailor-made customized itineraries that are the perfect amalgamation of leisure, fun and adventure.
                     </p>
                 </div>
             </div>
@@ -86,14 +81,15 @@ const section = props => {
         return (
             <div className="section">
                 <div className={`contentBox ${props.sectionClassName}`}>
-                    <div>
+                    <div className="companyDetails">
                         <div className="company-logo"></div>
-                        <p>818 VikasDeep Building, 18, Laxmi Nagar District Center</p>
+                        <p>818 Vikas Deep, Laxmi Nagar District Center</p>
+                        <p>Delhi 110092</p>
                         <p>atsdel@gmail.com | travel@ankitindia.net</p>
-                        <p>+91-4244 8417 | +91-4244 8418</p>
+                        <p>+91-4244 8417 | +91-98100 54227</p>
                         <div>
                             <div className="socialHandlesWrapper socialHandlesWrapperBorder">
-                                <a href="https://www.facebook.com/vikas.murarka.50" target="_blank">
+                                <a href="https://www.facebook.com/ankittravelservices/" target="_blank">
                                     <div className="socialHandles fbHandle"></div>
                                 </a>
                             </div>
@@ -102,6 +98,9 @@ const section = props => {
                                     <div className="socialHandles instaHandle"></div>
                                 </a>
                             </div>
+                        </div>
+                        <div className="location">
+                            <iframe className="locationMap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14006.814829421844!2d77.287353!3d28.638641!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4de3eac90a62f3a7!2sAnkit%20Travel%20Services!5e0!3m2!1sen!2sus!4v1591582512640!5m2!1sen!2sus" allowFullScreen="" aria-hidden="false" tabIndex="0" frameBorder="0"></iframe>
                         </div>
                     </div>
                 </div>
