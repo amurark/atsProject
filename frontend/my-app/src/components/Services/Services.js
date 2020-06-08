@@ -78,7 +78,6 @@ class Services extends Component {
                     "Dream Cruise",
                     "Norwegian Cruise Line",
                     "Royal Caribbean International",
-                    "Star Cruise",
                     "Other major ocean/river cruise lines viz. Azmara, Princess",
                     "Jalesh Cruise (Domestic)"
                 ],

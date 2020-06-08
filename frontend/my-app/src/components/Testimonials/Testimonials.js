@@ -76,7 +76,7 @@ class Testimonials extends Component {
         // });
     }
 
-    addAnimationClass = (index) => {
+    addAnimationClass = (index, size) => {
         if(index === 0 && this.state.startAnimation) {
             return "slider-text1";
         }  else {
@@ -92,7 +92,7 @@ class Testimonials extends Component {
                     {
                         this.testimonials.map((testimonial, index) => {
                             return (
-                                <div key={`testimonial${index}`} className={`slider-text ${this.addAnimationClass(index)}`} >
+                                <div key={`testimonial${index}`} className={`slider-text ${this.addAnimationClass(index, this.testimonials.length)}`} >
                                     <h2>{testimonial.title}</h2>
                                     <h6>{testimonial.destination}</h6>
                                     <div className="stars">

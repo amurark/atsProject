@@ -65,6 +65,15 @@
     font-weight: 300;
 }
 
+@media (max-width: 600px) {
+    .about-us {
+        padding: 1rem;
+    }
+    .company-title-animation {
+        padding: 7rem 1rem;
+    }
+}
+
 .second-background {
     background-image: url('../../backgrounds/second_background/taj.jpg');
     height: 25rem;
@@ -82,12 +91,13 @@
 
 .testimonials {
     background: #fff;
-    padding: 4rem;
+    padding: 2.5rem 4rem;
     font-size: 1.5rem;
-    height: 30rem;
+    height: 25rem;
     border: 1px solid rgba(0,0,0,.0.25);
     border-radius: 3px;
 }
+
 
 .testimonialBox {
     margin: 0 5rem;
@@ -99,7 +109,7 @@
 }
 
 .slider {
-    height: 25rem;
+    height: 20rem;
     overflow: hidden;
     text-align: justify;
 }
@@ -121,7 +131,7 @@
 }
 
 .slider-text {
-    height: 25rem;
+    height: 20rem;
     margin-bottom: 4rem;
     padding: 2rem;
     box-sizing: border-box;
@@ -153,14 +163,26 @@
 }
 
 @keyframes slideHorizontal {
-    0% {margin-top: -87rem;}
-    5% {margin-top: -58rem;}
-    33% {margin-top: -58rem;}
-    38% {margin-top: -29rem;}
-    66% {margin-top: -29rem;}
-    71% {margin-top: 0px;}
-    100% {margin-top: 0px;}
+
+    0% {margin-top: 0px;}
+    28% {margin-top: 0px;}
+    33% {margin-top: -24rem;}
+    61% {margin-top: -24rem;}
+    66% {margin-top: -48rem;}
+    100% {margin-top: -48rem;}
+    /* 100% {margin-top: -72rem;} */
 }
+
+
+/*
+0% {margin-top: -72rem;}
+5% {margin-top: -48rem;}
+33% {margin-top: -48rem;}
+38% {margin-top: -24rem;}
+66% {margin-top: -24rem;}
+71% {margin-top: 0px;}
+100% {margin-top: 0px;}
+*/
 
 .testimonial-name {
     text-align: right !important;

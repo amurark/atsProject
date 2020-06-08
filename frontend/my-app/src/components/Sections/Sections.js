@@ -83,7 +83,7 @@ const section = props => {
                 <div className={`contentBox ${props.sectionClassName}`}>
                     <div className="companyDetails">
                         <div className="company-logo"></div>
-                        <p>818 Vikas Deep, Laxmi Nagar District Center</p>
+                        <p>818 Vikas Deep, Laxmi Nagar District Centre</p>
                         <p>Delhi 110092</p>
                         <p>atsdel@gmail.com | travel@ankitindia.net</p>
                         <p>+91-4244 8417 | +91-98100 54227</p>
