@@ -21,6 +21,8 @@ module.exports = {
                 ratings: args.feedbackInput.ratings,
                 feedback: args.feedbackInput.feedback,
                 subscribe: args.feedbackInput.subscribe,
+                phone: args.feedbackInput.phone,
+                destination: args.feedbackInput.destination,
                 created_at: new Date(created_at).toISOString()
             });
     

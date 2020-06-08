@@ -9,10 +9,6 @@ class Snowflake extends Component {
         count: this.props.snowflake.value
     }
 
-    constructor(props) {
-        super(props);
-    }
-
     addAnimationStyle = () => {
         return {
             animation: `${this.props.snowflake.leftPos} ${this.props.snowflake.floatDuration}s linear infinite`

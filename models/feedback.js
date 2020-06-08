@@ -19,6 +19,14 @@ const feedbackSchema = new Schema({
         type: String,
         required: true
     },
+    phone: {
+        type: String,
+        required: true
+    },
+    destination: {
+        type: String,
+        required: true
+    },
     subscribe: {
         type: Boolean,
         required: true

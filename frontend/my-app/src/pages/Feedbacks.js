@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import AuthContext from '../context/auth-context';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import './Feedbacks.css';
 
 

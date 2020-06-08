@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlane, faBusAlt, faHotel, faShip, faSuitcaseRolling, faDollarSign, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faBusAlt, faHotel, faSuitcaseRolling, faDollarSign, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { GiCruiser } from 'react-icons/gi';
 import { FaPlane } from 'react-icons/fa';
 import './Services.css';

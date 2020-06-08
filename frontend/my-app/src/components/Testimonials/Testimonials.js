@@ -80,7 +80,7 @@ class Testimonials extends Component {
     }
 
     addAnimationClass = (index) => {
-        if(index == 0 && this.state.startAnimation) {
+        if(index === 0 && this.state.startAnimation) {
             return "slider-text1";
         }  else {
             return "";

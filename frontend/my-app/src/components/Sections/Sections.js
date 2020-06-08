@@ -89,18 +89,18 @@ const section = props => {
                         <p>+91-4244 8417 | +91-98100 54227</p>
                         <div>
                             <div className="socialHandlesWrapper socialHandlesWrapperBorder">
-                                <a href="https://www.facebook.com/ankittravelservices/" target="_blank">
+                                <a href="https://www.facebook.com/ankittravelservices/" target="_blank" rel="noopener noreferrer">
                                     <div className="socialHandles fbHandle"></div>
                                 </a>
                             </div>
                             <div className="socialHandlesWrapper">
-                                <a href="https://www.instagram.com/vikasmurarka_ats/" target="_blank">
+                                <a href="https://www.instagram.com/vikasmurarka_ats/" target="_blank" rel="noopener noreferrer">
                                     <div className="socialHandles instaHandle"></div>
                                 </a>
                             </div>
                         </div>
                         <div className="location">
-                            <iframe className="locationMap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14006.814829421844!2d77.287353!3d28.638641!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4de3eac90a62f3a7!2sAnkit%20Travel%20Services!5e0!3m2!1sen!2sus!4v1591582512640!5m2!1sen!2sus" allowFullScreen="" aria-hidden="false" tabIndex="0" frameBorder="0"></iframe>
+                            <iframe title="locationMap" className="locationMap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14006.814829421844!2d77.287353!3d28.638641!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4de3eac90a62f3a7!2sAnkit%20Travel%20Services!5e0!3m2!1sen!2sus!4v1591582512640!5m2!1sen!2sus" allowFullScreen="" aria-hidden="false" tabIndex="0" frameBorder="0"></iframe>
                         </div>
                     </div>
                 </div>

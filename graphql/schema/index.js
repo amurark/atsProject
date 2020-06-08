@@ -24,6 +24,8 @@ module.exports = buildSchema(`
         feedback: String!
         subscribe: Boolean!
         created_at: String!
+        phone: String!
+        destination: String!
     }
 
     input UserInput {
@@ -38,6 +40,8 @@ module.exports = buildSchema(`
         ratings: Float!
         feedback: String!
         subscribe: Boolean!
+        phone: String!
+        destination: String!
     }
 
     input FilterInput {

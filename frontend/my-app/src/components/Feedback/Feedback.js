@@ -100,9 +100,18 @@ class Feedback extends Component {
         const destination = this.destinationEl.current.value;
         const doSubscribe = this.subscribeEl.current.checked;
         console.log(ratings);
-        if( email.trim().length === 0 ||
-            ratings < 1 || ratings > 5 ||
-            feedback.length === 0 ) {
+        if( email.trim().length === 0) {
+            self.showStatus(true, "Provide Email!");
+            return;
+        }
+
+        if(feedback.length === 0) {
+            self.showStatus(true, "Provide Feedback!");
+            return;
+        }
+        
+        if(ratings < 0.5 || ratings > 5) {
+            self.showStatus(true, "Provide Ratings!");
             return;
         }
 
@@ -114,7 +123,9 @@ class Feedback extends Component {
                         name: "${name}",
                         ratings: ${ratings},
                         feedback: "${feedback}",
-                        subscribe: ${doSubscribe}
+                        subscribe: ${doSubscribe},
+                        phone: "${phone}",
+                        destination: "${destination}"
                 }) {
                     email
                     name
@@ -122,6 +133,8 @@ class Feedback extends Component {
                     feedback
                     subscribe
                     created_at
+                    phone
+                    destination
                 }
               }
             `
@@ -152,7 +165,7 @@ class Feedback extends Component {
             console.log(err);
             self.destroyProgressBar(function() {
                 self.showStatus(true, "Error submitting!");
-                self.clearForm();
+                //self.clearForm();
             });
         });
     }

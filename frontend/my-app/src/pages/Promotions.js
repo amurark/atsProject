@@ -6,10 +6,6 @@ import './Promotions.css';
 
 class PromotionsPage extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="promotions-wrapper">
