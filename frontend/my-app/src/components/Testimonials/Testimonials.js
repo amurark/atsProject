@@ -15,31 +15,28 @@ class Testimonials extends Component {
         this.myRef = React.createRef();
         this.testimonials = [
             {
-                title: "Had a wonderful time with the family.",
-                fullStars: 4,
-                halfStars: 0,
-                testimonial: `With everything under one roof, you can use ATS to scour the Web to find deals on flights, hotel rooms, and rental cars. One of the best features about this travel Website are the pricing trends and the predictive algorithms on where prices are going - up or down. You can use the information gleaned to assess your options for buying now or holding off.
-                            
-                            Another great feature? Use ATS’s travel alerts to email you when deals pop up for your intended destination. You can also search using a range of dates (i.e. 3 days before or after your departure and arrival dates) to find the best price on deals.`,
-                name: "- Margott Ritchie"
-            },
-            {
-                title: "Intriguing Experience. Will definitely try again.",
+                title: "Amazing. DMC was excellent.",
+                destination: "Singapore, Genting Dream Cruise and Club Med Bintan",
                 fullStars: 5,
                 halfStars: 0,
-                testimonial: `ATS is by far one of the best travel Websites for sourcing travel deals with one of the most intuitive meta search engines for pricing flights, hotels, and rental cars. Similar to Kayak, you can also setup travel alerts here to notify you when prices change.
-
-                While you can’t book flights directly on ATS (whereas you can on Kayak), you’ll find the resource to be invaluable. Use it in conjunction with Kayak and other sites to ensure that you’re finding the best deals for a particular trip.`,
-                name: "- Rakesh Singh"
+                testimonial: `As per the expectations, it was very good. Club Med Bintan and Dream Cruise were an amazing experience. The vacation was wonderful and I cannot thank you enough!! Club Med was the perfect resort for us. They were close together. The flight was good and the resort, incredible!`,
+                name: "- Kunal Shekhar"
             },
             {
-                title: "One of the best trips ever.",
+                title: "A very cooperative and prompt response to all our queries.",
+                destination: "South Africa",
                 fullStars: 4,
                 halfStars: 1,
-                testimonial: `With everything under one roof, you can use ATS to scour the Web to find deals on flights, hotel rooms, and rental cars. One of the best features about this travel Website are the pricing trends and the predictive algorithms on where prices are going - up or down. You can use the information gleaned to assess your options for buying now or holding off.
-
-                Another great feature? Use ATS’s travel alerts to email you when deals pop up for your intended destination. You can also search using a range of dates (i.e. 3 days before or after your departure and arrival dates) to find the best price on deals.`,
-                name: "- Brijesh Patel"
+                testimonial: `Accommodations booked were of top quality. Checkin, as desired, was very fast and easy. At each location, the guides/drivers were really good and had sound knowledge of the area and surrounding. They were very cooperative even if it meant giving us extra time taken beyond our schedule. Excursions in Stellenbosch & Cape Town were very good and we thoroughly enjoyed the planned excursions.`,
+                name: "- Ashish Bhatia"
+            },
+            {
+                title: "As usual, great.",
+                destination: "Sri Lanka",
+                fullStars: 5,
+                halfStars: 0,
+                testimonial: `Very knowledgeable and safe. Took us to many more places which weren't mentioned in the itinerary. Fantastic is an understatement.`,
+                name: "- Ankesh Bhotika"
             }
         ];
     }
@@ -97,6 +94,7 @@ class Testimonials extends Component {
                             return (
                                 <div key={`testimonial${index}`} className={`slider-text ${this.addAnimationClass(index)}`} >
                                     <h2>{testimonial.title}</h2>
+                                    <h6>{testimonial.destination}</h6>
                                     <div className="stars">
                                         {
                                             function() {

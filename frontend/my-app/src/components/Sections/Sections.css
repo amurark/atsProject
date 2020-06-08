@@ -111,6 +111,15 @@
     font-size: 28px;
 }
 
+.slider h6 {
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+    font-size: 18px;
+    color: #888;
+    font-style: italic;
+}
+
 .slider-text {
     height: 25rem;
     margin-bottom: 4rem;
@@ -159,7 +168,7 @@
 
 .stars {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     color: rgba(255, 123, 0);
 }
 
