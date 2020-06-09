@@ -216,7 +216,7 @@
 
 .companyDetails p {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .company-logo {
@@ -281,4 +281,9 @@
     width:"600";
     height:"450";
     border: none
+}
+
+.copyRights {
+    padding-top: 1rem;
+    color: #666;
 }

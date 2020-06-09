@@ -105,6 +105,7 @@ const section = props => {
                         <div className="location">
                             <iframe title="locationMap" className="locationMap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14006.814829421844!2d77.287353!3d28.638641!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4de3eac90a62f3a7!2sAnkit%20Travel%20Services!5e0!3m2!1sen!2sus!4v1591582512640!5m2!1sen!2sus" allowFullScreen="" aria-hidden="false" tabIndex="0" frameBorder="0"></iframe>
                         </div>
+                        <div className="copyRights">© All rights reserved by Ats.</div>
                     </div>
                 </div>
             </div>
