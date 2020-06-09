@@ -48,9 +48,9 @@ class Services extends Component {
                 icon: <FontAwesomeIcon icon={ faBusAlt } />,
                 header: "Transport Services",
                 details: [
-                    "Domestic/International travel – entire fleet of vehicles (SUV/Luxury Sedan/Limousine",
-                    "Self driven/Chauffeur driven cars",
-                    "Mini Vans and coaches – all configuration"
+                    "Domestic/International – entire fleet of vehicles (SUV/Luxury-Sedan/Limousine)",
+                    "Self/Chauffeur driven cars.",
+                    "Mini Vans and coaches – all configurations."
                 ],
                 style: {
                     color: "#004BA8",
@@ -63,8 +63,7 @@ class Services extends Component {
                 header: "Hotel Bookings",
                 details: [
                     "Worldwide Hotel Bookings",
-                    "Budget Hotels",
-                    "7 Star Hotels",
+                    "3-7 Star Hotels",
                     "Heritage Resorts",
                     "SPAs"
                 ],
@@ -83,7 +82,7 @@ class Services extends Component {
                     "Dream Cruises",
                     "Royal Caribbean International",
                     "Celebrity Cruises",
-                    "All other major ocean/river cruise lines viz. Azmara, Princess, Cunard, Hurtigruten, MSC, Disney etc.",
+                    "All other major ocean/river cruise lines viz. Azmara, Princess, Cunard, Hurtigruten, MSC, Disney, etc.",
                     "Jalesh Cruises (Domestic)"
                 ],
                 style: {
@@ -98,14 +97,11 @@ class Services extends Component {
                 details: [
                     "Visa – Paper and Evisa",
                     "Passport Felicitation",
-                    "Foreign Currency Notes, Forex Cards",
-                    "Foreign Remittances, student fee, family support etc",
+                    "Foreign currency notes & Forex Cards",
+                    "Foreign Remittances, student fee, family support, etc.",
                     "Document Attestation",
                     "Prepaid SIM Cards",
-                    "Worldwide Lounge Access",
-                    "Foreign currency notes - all tradeable currencies",
-                    "Forex Cards",
-                    "Foreign Remittance - student fee, family support etc."
+                    "Worldwide Lounge Access"
                 ],
                 style: {
                     color: "#48A9A6",
@@ -120,11 +116,11 @@ class Services extends Component {
                     "Customised Packages",
                     "Honeymoon Packages",
                     "Leisure Travel",
-                    "Special Interest Tours",
+                    "Special Interest Tours - Yoga, Religious, etc.",
                     "Adventure Tours",
                     "Business/Corporate Tours",
                     "Incentive Tours",
-                    "Pilgrimage Tours - Chardham/Amarnath/Kailash Mansarovar etc.",
+                    "Pilgrimage Tours - Chardham, Amarnath, Kailash-Mansarovar, etc.",
                     "Wildlife/Desert Safari"
                 ],
                 style: {
