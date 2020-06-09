@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBusAlt, faHotel, faSuitcaseRolling, faDollarSign, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faBusAlt, faConciergeBell, faHotel, faSuitcaseRolling, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { GiCruiser } from 'react-icons/gi';
 import { FaPlane } from 'react-icons/fa';
 import './Services.css';
@@ -10,7 +10,11 @@ class Services extends Component {
         name: "",
         icon: null,
         header: "",
-        details: []
+        details: [],
+        style: {
+            color: "#000",
+            fontSize: "1rem"
+        }
     }
     
     state = {
@@ -74,12 +78,13 @@ class Services extends Component {
                 icon: <GiCruiser />,
                 header: "Worldwide Cruises",
                 details: [
-                    "Celebrity Cruise",
-                    "Dream Cruise",
                     "Norwegian Cruise Line",
+                    "Crystal Cruises",
+                    "Dream Cruises",
                     "Royal Caribbean International",
-                    "Other major ocean/river cruise lines viz. Azmara, Princess",
-                    "Jalesh Cruise (Domestic)"
+                    "Celebrity Cruises",
+                    "All other major ocean/river cruise lines viz. Azmara, Princess, Cunard, Hurtigruten, MSC, Disney etc.",
+                    "Jalesh Cruises (Domestic)"
                 ],
                 style: {
                     color: "#385F71",
@@ -87,10 +92,17 @@ class Services extends Component {
                 }
             },
             {
-                icon: <FontAwesomeIcon icon={ faDollarSign } />,
-                name: "Forex",
-                header: "Currency Exchange",
+                icon: <FontAwesomeIcon icon={ faConciergeBell } />,
+                name: "Services",
+                header: "Miscellaneous Services",
                 details: [
+                    "Visa – Paper and Evisa",
+                    "Passport Felicitation",
+                    "Foreign Currency Notes, Forex Cards",
+                    "Foreign Remittances, student fee, family support etc",
+                    "Document Attestation",
+                    "Prepaid SIM Cards",
+                    "Worldwide Lounge Access",
                     "Foreign currency notes - all tradeable currencies",
                     "Forex Cards",
                     "Foreign Remittance - student fee, family support etc."
@@ -143,7 +155,7 @@ class Services extends Component {
         return (
             <React.Fragment>
                 <div className="services-section">
-                    <div className="headers white-theme">Have a destination in mind? We will help you with the rest!</div>
+                    <div className="headers white-theme">Have a date and destination in mind? We will help you with the rest!</div>
                     <ul className="services-wrapper">
                         {
                             this.services.map((service, index) => {
@@ -174,8 +186,7 @@ class Services extends Component {
                             <FontAwesomeIcon icon={ faChevronRight } />
                         </div>
                         <div className="service-details-contentbox">
-                            <div style={this.state.serviceDetails.style} className={`service-details-contentbox__background ${this.state.serviceDetails.name.toLowerCase()}_transforms `}>{ this.state.serviceDetails.icon }</div>
-                            <h2>{ this.state.serviceDetails.header }</h2>
+                            <h2  style={{color: this.state.serviceDetails.style.color}}>{ this.state.serviceDetails.header }</h2>
                             <ul className="service-details-contentBox__details">
                                 {
                                     this.state.serviceDetails.details.map((sDetails, index) => {
@@ -185,6 +196,7 @@ class Services extends Component {
                                     })
                                 }
                             </ul>
+                            <div style={this.state.serviceDetails.style} className={`service-details-contentbox__background ${this.state.serviceDetails.name.toLowerCase()}_transforms `}>{ this.state.serviceDetails.icon }</div>
                         </div>
                     </div>
                 </div>

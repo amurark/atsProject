@@ -196,6 +196,7 @@
 .service-details-contentbox h2 {
     text-align: center;
     font-weight: 400;
+    z-index: 1;
 }
 
 .service-details-contentbox p {
@@ -238,16 +239,20 @@
     font-size: 20rem !important;
 }
 
-.forex_transforms {
-    top: -8%;
-    right: -5%;
-    font-size: 25rem !important;
+.services_transforms {
+    top: 18%;
+    right: 15%;
+    font-size: 20rem !important;
 }
 
 .tours_transforms {
     bottom: -15px;
     right: -8%;
     font-size: 22rem !important;
+}
+
+.service-details-contentBox__details {
+    z-index: 1;
 }
 
 .service-details-contentBox__details>li {

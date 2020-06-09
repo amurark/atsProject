@@ -238,6 +238,13 @@
     text-decoration: underline;
 }
 
+.emailLink {
+    color: rgb(101, 101, 255) !important;
+}
+.emailLink:hover {
+    text-decoration: underline;
+}
+
 .socialHandlesWrapper {
     position: relative;
     display: inline-block;

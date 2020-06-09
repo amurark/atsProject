@@ -23,9 +23,12 @@ const section = props => {
                 <div className={`contentBox ${props.sectionClassName}`}>
                     <div className="headers">About Us</div>
                     <p>
-                        Operating since 2002 from the eastern ghats of the River Yamuna in New Delhi, India, we offer an entire spectrum of travel related services, providing a one-stop-shop for all your vacation needs. We extend prompt assistance using cutting-edge Global Reservation Systems.
+                        Operating since 2002 from the eastern ghats of the River Yamuna in New Delhi, India, we offer an entire spectrum of travel related services, providing a one-stop-shop for all your vacation needs. We extend prompt assistance using cutting-edge Global Reservation Systems with live inventory.
                         <br></br><br></br>
-                        From domestic to worldwide travel arrangements – you decide the date and destination, and we will present to you, tailor-made customized itineraries that are the perfect amalgamation of leisure, fun and adventure.
+                        Having a wide industry experience and firm belief in the philosophy of 'Customer First', gives us a better insight into customer expectations and drives us towards the perfect solution. 
+                        We take great pride in our time-tested suppliers and partners who form the backbone of our company helping us achieve highest levels of customer satisfaction.
+                        <br></br><br></br>
+                        From domestic to worldwide travel arrangements – you decide the date and destination and we will tailor-make itineraries that are the perfect amalgamation of business, leisure, fun and adventure.
                     </p>
                 </div>
             </div>
@@ -83,10 +86,10 @@ const section = props => {
                 <div className={`contentBox ${props.sectionClassName}`}>
                     <div className="companyDetails">
                         <div className="company-logo"></div>
-                        <p>818 Vikas Deep, Laxmi Nagar District Centre</p>
-                        <p>Delhi 110092</p>
-                        <p>atsdel@gmail.com | travel@ankitindia.net</p>
-                        <p>+91-4244 8417 | +91-98100 54227</p>
+                        <p>818 Vikas Deep Laxmi Nagar District Centre, Delhi 110092 India</p>
+                        
+                        <p><a className="emailLink" href="mailto:atsdel@gmail.com" target="_blank" rel="noopener noreferrer">atsdel@gmail.com</a> | <a className="emailLink" href="mailto:travel@ankitindia.net" target="_blank" rel="noopener noreferrer">travel@ankitindia.net</a></p>
+                        <p>+91-11-4244 8417 | +91-98100 54227</p>
                         <div>
                             <div className="socialHandlesWrapper socialHandlesWrapperBorder">
                                 <a href="https://www.facebook.com/ankittravelservices/" target="_blank" rel="noopener noreferrer">
